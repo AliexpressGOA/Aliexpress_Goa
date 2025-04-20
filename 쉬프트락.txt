@@ -1,0 +1,35 @@
+local Player = game.Players.LocalPlayer
+local PlayerGui = Player.PlayerGui
+local StarterGui = game:GetService("StarterGui")
+
+-- 상단 바 및 불필요한 UI 비활성화
+StarterGui:SetCore("TopbarEnabled", false)
+
+-- PlayerGui에서 동그란 아이콘 관련 UI 제거
+local function hideCircleIcons()
+    for _, gui in pairs(PlayerGui:GetChildren()) do
+        if gui:IsA("ScreenGui") or gui:IsA("GuiObject") then
+            -- "Circle" 또는 "Icon" 같은 이름 포함된 UI 타겟
+            if string.find(string.lower(gui.Name), "circle") or string.find(string.lower(gui.Name), "icon") then
+                gui.Enabled = false
+                gui.Visible = false
+            end
+            -- 모든 ImageLabel/ImageButton 순회 (동그란 이미지일 가능성)
+            for _, element in pairs(gui:GetDescendants()) do
+                if element:IsA("ImageLabel") or element:IsA("ImageButton") then
+                    element.Visible = false
+                end
+            end
+        end
+    end
+end
+
+-- 초기 실행
+hideCircleIcons()
+
+-- UI가 새로 로드될 때마다 체크
+PlayerGui.ChildAdded:Connect(function(child)
+    if child:IsA("ScreenGui") or child:IsA("GuiObject") then
+        hideCircleIcons()
+    end
+end)
