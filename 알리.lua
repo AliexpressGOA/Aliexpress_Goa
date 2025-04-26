@@ -35,17 +35,19 @@ local Button1 = Tab1:CreateButton({
   Name = "어드민",
   Callback = function()
       print("FE어드민기능이 켜졌어요!")
+      -- FE어드민 기능 스크립트 호출
       loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
   end,
 })
 
 -- 두 번째 탭: 살보결
-local Tab2 = Window:CreateTab("✅살보결", 6031075939)
+local Tab2 = Window:CreateTab("✅살보결",)
 
 local Button2 = Tab2:CreateButton({
   Name = "Tbao Hub",
   Callback = function()
       print("살보결스크립트 켜짐")
+      -- 살보결 스크립트 호출
       loadstring(game:HttpGet('https://raw.githubusercontent.com/tbao143/thaibao/main/TbaoHubMurdervssheriff'))()
   end,
 })
@@ -54,17 +56,19 @@ local Button3 = Tab2:CreateButton({
   Name = "Zeyphr [ Close Cheat ]",
   Callback = function()
       print("살보결스크립트 켜짐")
+      -- Zeyphr 스크립트 호출
       loadstring(game:HttpGet("https://raw.githubusercontent.com/TheRealAvrwm/Projects/refs/heads/main/MVSD%20Xeno%20Closet.lua", true))()
   end,
 })
 
 -- 세 번째 탭: 데드레일
-local Tab3 = Window:CreateTab("데드레일", 6031075940)
+local Tab3 = Window:CreateTab("데드레일",)
 
 local Button4 = Tab3:CreateButton({
   Name = "Speed Hub X",
   Callback = function()
       print("데드레일 스크립트 켜짐")
+      -- 데드레일 스크립트 호출
       loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Speed-Hub-X/main/Speed%20Hub%20X.lua", true))()
   end,
 })
