@@ -1,74 +1,233 @@
+local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+
+-- 윈도우 생성
 local Window = Rayfield:CreateWindow({
-   Name = "🔥알리 스크립트⭐✅",
-   Icon = 0, -- Icon in Topbar. Can use Lucide Icons (string) or Roblox Image (number). 0 to use no icon (default).
-   LoadingTitle = "Rayfield Interface Suite",
-   LoadingSubtitle = "by 알리",
-   Theme = "Default", -- Check https://docs.sirius.menu/rayfield/configuration/themes
-   DisableRayfieldPrompts = false,
-   DisableBuildWarnings = false, -- Prevents Rayfield from warning when the script has a version mismatch with the interface
-   ConfigurationSaving = {
-      Enabled = true,
-      FolderName = nil, -- Create a custom folder for your hub/game
-      FileName = "Big Hub"
-   },
-   Discord = {
-      Enabled = false, -- Prompt the user to join your Discord server if their executor supports it
-      Invite = "noinvitelink", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ ABCD would be ABCD
-      RememberJoins = true -- Set this to false to make them join the discord every time they load it up
-   },
-   KeySystem = true, -- Set this to true to use our key system
-   KeySettings = {
-      Title = "Untitled",
-      Subtitle = "Key System",
-      Note = "키는 'AliExpress' 입니다.", -- Use this to tell the user how to get a key
-      FileName = "Key", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
-      SaveKey = true, -- The user's key will be saved, but if you change the key, they will be unable to use your script
-      GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
-      Key = {"AliExpress"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
-   }
+    Name = "🔥공백이 스크립트⭐✅",
+    Icon = 0,
+    LoadingTitle = "로딩중",
+    LoadingSubtitle = "by 공백이",
+    Theme = "Light",
+    DisableRayfieldPrompts = false,
+    DisableBuildWarnings = false,
+    ConfigurationSaving = {
+        Enabled = true,
+        FolderName = nil,
+        FileName = "Big Hub"
+    },
+    Discord = {
+        Enabled = false,
+        Invite = "noinvitelink",
+        RememberJoins = true
+    },
+    KeySystem = true,
+    KeySettings = {
+        Title = "Untitled",
+        Subtitle = "Key System",
+        Note = "키는 'AliExpress' 입니다.",
+        FileName = "Key",
+        SaveKey = true,
+        GrabKeyFromSite = false,
+        Key = {"AliExpress"}
+    }
 })
 
--- 첫 번째 탭: 어드민
+-- 탭 생성
 local Tab1 = Window:CreateTab("🔥메인 탭", 6031075938)
+local Tab2 = Window:CreateTab("라이벌🔫")
+local Tab3 = Window:CreateTab("✅살보결")
+local Tab4 = Window:CreateTab("데드레일")
+local Tab5 = Window:CreateTab("가장강력한 전장")
+local Tab6 = Window:CreateTab("보물선 만들기")
+local Tab7 = Window:CreateTab("배드워즈")
+local Tab8 = Window:CreateTab("프리즌라이프")
 
-local Button1 = Tab1:CreateButton({
-  Name = "어드민",
-  Callback = function()
-      print("FE어드민기능이 켜졌어요!")
-      -- FE어드민 기능 스크립트 호출
-      loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
-  end,
+-- 메인 탭 버튼들
+Tab1:CreateButton({
+    Name = "어드민",
+    Callback = function()
+        print("FE어드민 기능이 켜졌어요!")
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+    end,
 })
 
--- 두 번째 탭: 살보결
-local Tab2 = Window:CreateTab("✅살보결",)
-
-local Button2 = Tab2:CreateButton({
-  Name = "Tbao Hub",
-  Callback = function()
-      print("살보결스크립트 켜짐")
-      -- 살보결 스크립트 호출
-      loadstring(game:HttpGet('https://raw.githubusercontent.com/tbao143/thaibao/main/TbaoHubMurdervssheriff'))()
-  end,
+Tab1:CreateButton({
+    Name = "딸치기 스크",
+    Callback = function()
+        loadstring(game:HttpGet("https://pastefy.app/wa3v2Vgm/raw"))()
+    end,
 })
 
-local Button3 = Tab2:CreateButton({
-  Name = "Zeyphr [ Close Cheat ]",
-  Callback = function()
-      print("살보결스크립트 켜짐")
-      -- Zeyphr 스크립트 호출
-      loadstring(game:HttpGet("https://raw.githubusercontent.com/TheRealAvrwm/Projects/refs/heads/main/MVSD%20Xeno%20Closet.lua", true))()
-  end,
+Tab1:CreateButton({
+    Name = "ESP",
+    Callback = function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/ic3w0lf22/Unnamed-ESP/master/UnnamedESP.lua', true))()
+    end,
 })
 
--- 세 번째 탭: 데드레일
-local Tab3 = Window:CreateTab("데드레일",)
-
-local Button4 = Tab3:CreateButton({
-  Name = "Speed Hub X",
-  Callback = function()
-      print("데드레일 스크립트 켜짐")
-      -- 데드레일 스크립트 호출
-      loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Speed-Hub-X/main/Speed%20Hub%20X.lua", true))()
-  end,
+Tab1:CreateButton({
+    Name = "스피드있고다른좋은거많은기본핵-개좋음",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/QP-Community/Roblox-Exploit/main/Sirius"))()
+    end,
 })
+
+Tab1:CreateButton({
+    Name = "박기 스크립트;;",
+    Callback = function()
+       loadstring(game:HttpGet("https://raw.githubusercontent.com/FRAGBOMBBLITZ/sources/refs/heads/main/Walkbang.lua"))()
+    end,
+ })
+
+Tab1:CreateButton({
+    Name = "검열 바이패스(파키스탄 언어로 바꿔야함)",
+    Callback = function()
+       loadstring(game:HttpGet("https://raw.githubusercontent.com/AnnaRoblox/AnnaBypasser/refs/heads/main/AnnaBypasser.lua",true))()
+    end,
+ })
+
+-- 라이벌 탭 버튼
+Tab2:CreateButton({
+    Name = "라이벌 총알 자동맞춤-서버 바뀔때마다 누르세요",
+    Callback = function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/ThunderScriptSolutions/Misc/refs/heads/main/RivalsSilentAim'))()
+    end,
+})
+
+-- 스피드 슬라이더
+Tab1:CreateSlider({
+    Name = "스피드",
+    Range = {0, 300},
+    Increment = 10,
+    Suffix = "Bananas",
+    CurrentValue = 10,
+    Flag = "Slider1", 
+    Callback = function(Value)
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value
+    end,
+ })
+
+-- 점프 파워 슬라이더
+Tab1:CreateSlider({
+    Name = "점프 파워",
+    Range = {0, 600},
+    Increment = 10,
+    Suffix = "Bananas",
+    CurrentValue = 10,
+    Flag = "Slider2",  -- 중복 방지
+    Callback = function(Value)
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = Value
+    end,
+ })
+
+Tab2:CreateButton({
+    Name = "SILENT HUB",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/KxGOATESQUE/SilentRivals/main/silentsolara"))()
+    end,
+})
+
+-- 살보결 탭 버튼들
+Tab3:CreateButton({
+    Name = "Tbao Hub",
+    Callback = function()
+        print("살보결 스크립트 켜짐")
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/tbao143/thaibao/main/TbaoHubMurdervssheriff'))()
+    end,
+})
+
+Tab3:CreateButton({
+    Name = "Zeyphr [Close Cheat]",
+    Callback = function()
+        print("Zeyphr 스크립트 켜짐")
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/TheRealAvrwm/Projects/refs/heads/main/MVSD%20Xeno%20Closet.lua", true))()
+    end,
+})
+
+Tab3:CreateButton({
+    Name = "살인자vs보안관 가장좋은스크",
+    Callback = function()
+        loadstring(game:HttpGet("https://scriptblox.com/raw/Universal-Script-Update-script-hitbox-9326"))()
+    end,
+})
+
+-- 데드레일 탭 버튼
+Tab4:CreateButton({
+    Name = "Speed Hub X",
+    Callback = function()
+        print("데드레일 스크립트 켜짐!")
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Speed-Hub-X/main/Speed%20Hub%20X.lua", true))()
+    end,
+})
+
+-- 가장강력한 전장 탭 버튼
+Tab5:CreateButton({
+    Name = "무한 쓰레기통,각종 기능",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/yes1nt/yes/refs/heads/main/Trashcan%20Man", true))()
+    end,
+})
+
+Tab5:CreateButton({
+   Name = "고죠 스크(사이타마)",
+   Callback = function()
+       loadstring(game:HttpGet("https://raw.githubusercontent.com/skibiditoiletfan2007/BaldyToSorcerer/refs/heads/main/LatestV2.lua"))()
+   end,
+})
+
+Tab5:CreateButton({
+   Name = "가로우 1번 즉사",
+   Callback = function()
+       loadstring(game:HttpGet("https://raw.githubusercontent.com/loadlua/TSB/main/Insta-kill.lua"))()
+   end,
+})
+
+Tab5:CreateButton({
+    Name = "데스 노트(가로우)",
+    Callback = function()
+       loadstring(game:HttpGet("https://paste.ee/r/AyoFs"))()
+    end,
+ })
+
+ Tab5:CreateButton({
+    Name = "고죠 스크(사이타마)",
+    Callback = function()
+       loadstring(game:HttpGet("https://raw.githubusercontent.com/skibiditoiletfan2007/BaldyToSorcerer/refs/heads/main/LatestV2.lua"))()
+    end,
+ })
+
+Tab5:CreateButton({
+   Name = "나한테 슬로우-간지전용",
+   Callback = function()
+       loadstring(game:HttpGet("https://raw.githubusercontent.com/Reapvitalized/TSB/refs/heads/main/ARCAURA.lua"))()
+   end,
+})
+
+-- 보물선 만들기 탭 버튼
+Tab6:CreateButton({
+    Name = "오토팜",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/ExyXyz/ExyGantenk/main/ExyBABFT"))()
+    end,
+})
+
+-- 배드워즈 탭 버튼
+Tab7:CreateButton({
+    Name = "QP VAPE",
+    Callback = function()
+        loadstring(game:HttpGet("https://qpvape.org"))()
+    end,
+})
+
+Tab7:CreateButton({
+    Name = "Aurora V4",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/cocotv666/Aurora/refs/heads/main/Aurora_Loader"))()
+    end,
+})
+
+Tab8:CreateButton({
+    Name = "프리즌 라이프 ip따기, 킬 올, 루프킬 올, 서버 폭파 등등",
+    Callback = function()
+       loadstring(game:HttpGet('https://raw.githubusercontent.com/elliexmln/PrizzLife/main/pladmin.lua'))()
+    end,
+ })
